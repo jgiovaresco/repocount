@@ -1,0 +1,28 @@
+app:
+  build: php-5.6-with-pdo-mysql
+  ports:
+   - "8080:80"
+  volumes:
+   - ./app:/var/www/html
+   - ./src:/var/www/html/src
+   - ./vendor:/var/www/html/vendor
+  links:
+   - database
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin
+  ports :
+    - "8081:80"
+  environment:
+    - MYSQL_USERNAME=root
+    - MYSQL_PASSWORD=password
+  links:
+    - database:mysql
+database:
+  image: mysql:5.5
+  ports:
+   - "3306:3306"
+  environment:
+   - MYSQL_ROOT_PASSWORD=password
+   - MYSQL_DATABASE=repocount
+   - MYSQL_USER=repocount
+   - MYSQL_PASSWORD=password
