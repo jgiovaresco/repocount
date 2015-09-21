@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<dataset>
+	<company id="1234-567-890" name="Enalean" />
+	<company id="098-765-4321" name="MyCompany" />
+
+	<team id="1a2b-3c4d-5e6f" name="TeamA" company_id="1234-567-890" />
+	<team id="7g8h-9i1j-2k3l" name="TeamB" company_id="1234-567-890" />
+
+	<employee id="abcd-efgh-ijk" username="nterray" company_id="1234-567-890" team_id="1a2b-3c4d-5e6f" />
+	<employee id="xyz1-123-4567" username="yrosset" company_id="1234-567-890" team_id="1a2b-3c4d-5e6f" />
+	<employee id="lmop-qrst-uvw" username="sandrae" company_id="1234-567-890" team_id="7g8h-9i1j-2k3l" />
+
+	<repository id="123-456" name="repo1" owner_id="abcd-efgh-ijk" />
+	<repository id="789-101" name="repo2" owner_id="abcd-efgh-ijk" />
+	<repository id="112-131" name="repo1" owner_id="lmop-qrst-uvw" />
+	<repository id="141-516" name="repo1" owner_id="xyz1-123-4567" />
+</dataset>
