@@ -1,0 +1,9 @@
+database/
+
+### JetBrains template
+*.iml
+.idea/
+
+### Composer
+vendor/
+composer.lock
