@@ -20,7 +20,7 @@ class SqlCompanyQueryServiceTest extends AbstractDatabaseTest
 	 */
 	public function getDataSet()
 	{
-		return $this->createFlatXMLDataSet(dirname(__FILE__) . '/count_company_employees_repo.xml');
+		return $this->createFlatXMLDataSet(dirname(__FILE__) . '/company_employees_repo.xml');
 	}
 
 	public function test_countEmployeesRepositoryOfCompany_should_return_sum_of_repositories_of_each_employees()
@@ -33,5 +33,15 @@ class SqlCompanyQueryServiceTest extends AbstractDatabaseTest
 	{
 		$count = $this->employeeQueryService->countEmployeesRepositoryOfCompany('unknown');
 		expect($count)->to->be->equal(0);
+	}
+
+	public function test_allEmployeesOfCompany_should_return_employees()
+	{
+		$employees = $this->employeeQueryService->allEmployeesOfCompany('Enalean');
+		expect($employees)->to->be->an('array')->and->to->have->length(2);
+		expect($employees[0]->employeeId())->to->be->equal('abcd-efgh-ijk');
+		expect($employees[0]->username())->to->be->equal('nterray');
+		expect($employees[1]->employeeId())->to->be->equal('lmop-qrst-uvw');
+		expect($employees[1]->username())->to->be->equal('sandrae');
 	}
 }

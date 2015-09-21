@@ -1,6 +1,8 @@
 <?php
 namespace repocount\application\query;
 
+use repocount\domain\Employee;
+
 interface EmployeeQueryService
 {
 	/**
@@ -8,6 +10,12 @@ interface EmployeeQueryService
 	 * @return int
 	 */
 	public function countEmployeesRepositoryOfCompany($companyName);
+
+	/**
+	 * @param $companyName
+	 * @return Employee[]
+	 */
+	public function allEmployeesOfCompany($companyName);
 }
 
 ?>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<dataset>
+
+	<company id="1234-567-890" name="Enalean" />
+
+	<team id="1a2b-3c4d-5e6f" name="TeamA" company_id="1234-567-890" />
+
+	<employee id="abcd-efgh-ijk" username="nterray" company_id="1234-567-890" team_id="1a2b-3c4d-5e6f" />
+
+</dataset>

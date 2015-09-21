@@ -11,10 +11,7 @@ class CountCompanyEmployeesRepositoriesTest extends PHPUnit_Framework_TestCase
 	{
 		parent::setUp();
 		$this->mockEmployeeQuery = $this
-			->getMockBuilder('repocount\application\query\EmployeeQueryService')
-			->disableOriginalConstructor()
-			->setMethods(array('countEmployeesRepositoryOfCompany'))
-			->getMock();
+			->getMockForAbstractClass('repocount\application\query\EmployeeQueryService');
 		$this->action = new CountCompanyEmployeesRepositories($this->mockEmployeeQuery);
 	}
 
