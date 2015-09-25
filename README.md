@@ -13,7 +13,7 @@ Install the following packages :
 * php5-mysql
 * php5-sqlite
 
-(Docker)[https://docs.docker.com/installation/] and (Docker Compose)[https://docs.docker.com/compose/install/] must be installed
+[Docker](https://docs.docker.com/installation/) and [Docker Compose](https://docs.docker.com/compose/install/) must be installed.
 
 ## Unit Tests
 
